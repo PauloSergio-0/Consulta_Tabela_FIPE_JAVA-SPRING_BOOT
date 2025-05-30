@@ -13,7 +13,6 @@ public class ConsumoApi {
         HttpRequest request = HttpRequest.newBuilder(URI.create(endereco))
                 .build();
 
-
         HttpResponse<String> response = null;
 
         try {
@@ -21,7 +20,6 @@ public class ConsumoApi {
         } catch (InterruptedException | IOException e) {
             throw new RuntimeException(e);
         }
-
 
         return response.body(); // retorna json
     }
